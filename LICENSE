@@ -1,0 +1,34 @@
+Copyright (c) 2026 Bardheim contributors.
+
+All rights reserved.
+
+Bardheim is source-available for review, issue reporting, and personal Valheim
+mod use through the official Bardheim release channels.
+
+You may:
+
+- Download and use unmodified Bardheim release builds for personal Valheim play.
+- Inspect this repository's source code and assets.
+- Fork this repository where allowed by the hosting platform's terms, for the
+  limited purpose of proposing changes back to the Bardheim project.
+
+You may not, without prior written permission from the copyright holder:
+
+- Redistribute, mirror, rehost, or repackage Bardheim builds, source code, or
+  assets outside the official Bardheim release channels.
+- Sell Bardheim or include it in paid mod packs, paid collections, or other
+  commercial distributions.
+- Publish modified Bardheim builds.
+- Reuse Bardheim code, audio, generated visuals, icons, or other assets in other
+  projects.
+- Convert Bardheim or its assets for other games.
+
+Permission and takedown contact: longhouselistings@gmail.com
+
+This is not an open-source license. No patent, trademark, sublicensing,
+redistribution, modification, or asset-reuse rights are granted except as stated
+above.
+
+Valheim is owned by Iron Gate Studio. BepInEx and Jotunn are separate projects
+with their own licenses. Bardheim does not grant rights to Valheim, BepInEx,
+Jotunn, Unity, or third-party content.
