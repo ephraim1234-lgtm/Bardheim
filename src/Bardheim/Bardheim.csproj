@@ -1,0 +1,87 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Bardheim</AssemblyName>
+    <RootNamespace>Bardheim</RootNamespace>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <Version>0.7.0</Version>
+    <ValheimManagedDir Condition="'$(ValheimManagedDir)' == '' and '$(VALHEIM_INSTALL)' != ''">$(VALHEIM_INSTALL)\valheim_Data\Managed</ValheimManagedDir>
+    <ValheimManagedDir Condition="'$(ValheimManagedDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Valheim\valheim_Data\Managed</ValheimManagedDir>
+    <BepInExProfileDir Condition="'$(BepInExProfileDir)' == '' and '$(BEPINEX_PROFILE_DIR)' != ''">$(BEPINEX_PROFILE_DIR)</BepInExProfileDir>
+    <BepInExProfileDir Condition="'$(BepInExProfileDir)' == ''">$(APPDATA)\r2modmanPlus-local\Valheim\profiles\valheimbot</BepInExProfileDir>
+    <BepInExCoreDir Condition="'$(BepInExCoreDir)' == '' and '$(BEPINEX_CORE_DIR)' != ''">$(BEPINEX_CORE_DIR)</BepInExCoreDir>
+    <BepInExCoreDir Condition="'$(BepInExCoreDir)' == ''">$(BepInExProfileDir)\BepInEx\core</BepInExCoreDir>
+    <JotunnDir Condition="'$(JotunnDir)' == '' and '$(JOTUNN_DIR)' != ''">$(JOTUNN_DIR)</JotunnDir>
+    <JotunnDir Condition="'$(JotunnDir)' == ''">$(BepInExProfileDir)\BepInEx\plugins\ValheimModding-Jotunn</JotunnDir>
+    <NuGetPackageRoot Condition="'$(NuGetPackageRoot)' == ''">$(USERPROFILE)\.nuget\packages\</NuGetPackageRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx" Condition="Exists('$(BepInExCoreDir)\BepInEx.dll')">
+      <HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="netstandard" Condition="Exists('$(ValheimManagedDir)\netstandard.dll')">
+      <HintPath>$(ValheimManagedDir)\netstandard.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Jotunn" Condition="Exists('$(JotunnDir)\Jotunn.dll')">
+      <HintPath>$(JotunnDir)\Jotunn.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_valheim" Condition="Exists('$(ValheimManagedDir)\assembly_valheim.dll')">
+      <HintPath>$(ValheimManagedDir)\assembly_valheim.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_guiutils" Condition="Exists('$(ValheimManagedDir)\assembly_guiutils.dll')">
+      <HintPath>$(ValheimManagedDir)\assembly_guiutils.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="assembly_utils" Condition="Exists('$(ValheimManagedDir)\assembly_utils.dll')">
+      <HintPath>$(ValheimManagedDir)\assembly_utils.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp" Condition="Exists('$(ValheimManagedDir)\Assembly-CSharp.dll')">
+      <HintPath>$(ValheimManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine" Condition="Exists('$(ValheimManagedDir)\UnityEngine.dll')">
+      <HintPath>$(ValheimManagedDir)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule" Condition="Exists('$(ValheimManagedDir)\UnityEngine.CoreModule.dll')">
+      <HintPath>$(ValheimManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule" Condition="Exists('$(ValheimManagedDir)\UnityEngine.InputLegacyModule.dll')">
+      <HintPath>$(ValheimManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule" Condition="Exists('$(ValheimManagedDir)\UnityEngine.AudioModule.dll')">
+      <HintPath>$(ValheimManagedDir)\UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule" Condition="Exists('$(ValheimManagedDir)\UnityEngine.ImageConversionModule.dll')">
+      <HintPath>$(ValheimManagedDir)\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule" Condition="Exists('$(ValheimManagedDir)\UnityEngine.IMGUIModule.dll')">
+      <HintPath>$(ValheimManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\assets-src\audio\notes\A#3.wav;..\..\assets-src\audio\notes\A#4.wav;..\..\assets-src\audio\notes\A3.wav;..\..\assets-src\audio\notes\A4.wav;..\..\assets-src\audio\notes\B3.wav;..\..\assets-src\audio\notes\B4.wav;..\..\assets-src\audio\notes\Bb3.wav;..\..\assets-src\audio\notes\Bb4.wav;..\..\assets-src\audio\notes\C#4.wav;..\..\assets-src\audio\notes\C#5.wav;..\..\assets-src\audio\notes\C4.wav;..\..\assets-src\audio\notes\C5.wav;..\..\assets-src\audio\notes\D#3.wav;..\..\assets-src\audio\notes\D#4.wav;..\..\assets-src\audio\notes\D3.wav;..\..\assets-src\audio\notes\D4.wav;..\..\assets-src\audio\notes\D5.wav;..\..\assets-src\audio\notes\E3.wav;..\..\assets-src\audio\notes\E4.wav;..\..\assets-src\audio\notes\F#3.wav;..\..\assets-src\audio\notes\F#4.wav;..\..\assets-src\audio\notes\F3.wav;..\..\assets-src\audio\notes\F4.wav;..\..\assets-src\audio\notes\G#3.wav;..\..\assets-src\audio\notes\G#4.wav;..\..\assets-src\audio\notes\G3.wav;..\..\assets-src\audio\notes\G4.wav">
+      <LogicalName>Bardheim.Assets.Audio.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\assets-src\audio\drums\kick.wav;..\..\assets-src\audio\drums\snare.wav;..\..\assets-src\audio\drums\rim.wav;..\..\assets-src\audio\drums\clap.wav;..\..\assets-src\audio\drums\muted.wav;..\..\assets-src\audio\drums\open.wav;..\..\assets-src\audio\drums\low_tom.wav;..\..\assets-src\audio\drums\high_tom.wav;..\..\assets-src\audio\drums\low_kick.wav;..\..\assets-src\audio\drums\electric_snare.wav;..\..\assets-src\audio\drums\pedal_hat.wav;..\..\assets-src\audio\drums\crash.wav;..\..\assets-src\audio\drums\ride.wav;..\..\assets-src\audio\drums\mid_tom.wav;..\..\assets-src\audio\drums\cowbell.wav;..\..\assets-src\audio\drums\tambourine.wav">
+      <LogicalName>Bardheim.Assets.Audio.Drums.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\assets-src\audio\flute\D4.wav;..\..\assets-src\audio\flute\D#4.wav;..\..\assets-src\audio\flute\E4.wav;..\..\assets-src\audio\flute\F4.wav;..\..\assets-src\audio\flute\F#4.wav;..\..\assets-src\audio\flute\G4.wav;..\..\assets-src\audio\flute\G#4.wav;..\..\assets-src\audio\flute\A4.wav;..\..\assets-src\audio\flute\Bb4.wav;..\..\assets-src\audio\flute\B4.wav;..\..\assets-src\audio\flute\C5.wav;..\..\assets-src\audio\flute\C#5.wav;..\..\assets-src\audio\flute\D5.wav;..\..\assets-src\audio\flute\D#5.wav;..\..\assets-src\audio\flute\E5.wav;..\..\assets-src\audio\flute\F5.wav;..\..\assets-src\audio\flute\F#5.wav;..\..\assets-src\audio\flute\G5.wav;..\..\assets-src\audio\flute\G#5.wav;..\..\assets-src\audio\flute\A5.wav;..\..\assets-src\audio\flute\Bb5.wav;..\..\assets-src\audio\flute\B5.wav">
+      <LogicalName>Bardheim.Assets.Audio.Flute.%(Filename)%(Extension)</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

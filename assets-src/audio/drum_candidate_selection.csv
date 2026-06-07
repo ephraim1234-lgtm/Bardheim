@@ -1,0 +1,17 @@
+hit_id,source_name,start_seconds,end_seconds
+kick,Rimclick Thunder.wav,3.549,3.849
+low_kick,Rimclick Thunder.wav,0.907,1.227
+snare,Rimclick Thunder.wav,13.599,13.839
+electric_snare,Bone Seed Rattle.wav,18.062,18.300
+rim,Rimclick Thunder (1).wav,14.918,15.190
+clap,Bone Seed Rattle.wav,13.060,13.300
+muted,Rimclick Thunder.wav,3.539,3.779
+open,Calfhide Resonance.wav,0.441,0.841
+low_tom,Calfhide Resonance.wav,2.161,2.481
+mid_tom,Calfhide Resonance.wav,5.574,5.894
+high_tom,Rimclick Thunder (1).wav,12.210,12.390
+pedal_hat,Bone Rattle.wav,5.711,5.786
+crash,Bone Seed Rattle.wav,16.066,16.386
+ride,Bone Seed Rattle.wav,10.065,10.345
+cowbell,Rimclick Thunder (1).wav,13.562,13.812
+tambourine,Bone Seed Rattle.wav,2.090,2.550

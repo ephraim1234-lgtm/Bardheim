@@ -1,0 +1,10 @@
+{
+  "name": "Bardheim",
+  "version_number": "0.7.0",
+  "website_url": "https://github.com/ephraim1234-lgtm/Bardheim",
+  "description": "Playable lyre, drum, and flute instruments for Valheim with local MIDI song playback.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2333",
+    "ValheimModding-Jotunn-2.29.0"
+  ]
+}

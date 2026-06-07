@@ -1,0 +1,44 @@
+# .NET build output
+bin/
+obj/
+artifacts/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+*.sln.DotSettings.user
+
+# Local Valheim/BepInEx installs and profiles
+BepInEx/
+doorstop_config.ini
+winhttp.dll
+start_game_bepinex.sh
+start_server_bepinex.sh
+unstripped_corlib/
+valheim_Data/
+Valheim/
+profiles/
+modprofiles/
+
+# Do not commit local game assemblies, copied dependencies, or build packages
+*.dll
+*.pdb
+*.mdb
+dist/
+
+# Local source captures and generated audition outputs
+sounds/
+assets-src/audio/renders/
+assets-src/audio/drum-candidates/
+assets-src/audio/drum-selected-candidates/
+assets-src/audio/flute-samples/
+
+# OS files
+.DS_Store
+Thumbs.db
